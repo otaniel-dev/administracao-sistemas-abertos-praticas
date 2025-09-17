@@ -1,2 +1,4 @@
 # Praticas em Administração de Sistemas Abertos 
 Eis aqui a documentação das práticas da matéria de Administração de Sistemas Abertos, lecionadas pelo professor Paulo Eugênio durante o Curso Técnico em Redes de Computadores no IFRN. Nosso louvável professor, nos instruiu a registrar alguns passos durante as práticas para que possamos utilizá-los durante o restante do curso e fixemos realmente o conteúdo aprendido.
+<br>
+É importante ressaltar, que o Sistema Operacional utilizado é o Linux Ubuntu.
