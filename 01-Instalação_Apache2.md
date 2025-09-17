@@ -1,6 +1,6 @@
 # Atualização da lista de pacotes disponíveis para o sistema:
 
-A atualização dos pacotes disponíveis é importante para que ao solicitar a instalação de um programa, o sistema consiga localizar o pacote para iniciar a instalação. Caso a atualização da lista de pacotes não seja realizada, o sistema retornará a informação de que não conseguiu encontrar o pacote para instalação.
+A atualização dos pacotes disponíveis é importante para que ao solicitar a instalação de um programa, o sistema consiga localizar o pacote para iniciar a instalação. Caso a atualização da lista de pacotes não seja realizada, o sistema pode  retornar a informação de que não conseguiu encontrar o pacote para instalação.
 
 * Para a atualização da lista de pacotes, iremos usar o comando:
 ```bat
@@ -72,5 +72,7 @@ O clone, gerará uma pasta nomeada de ```site-simples-com-html-e-css-```, para q
 ```
 sudo cp site-simples-com-html-e-css-/background.jpg .
 sudo cp site-simples-com-html-e-css-/index.html .
+sudo cp site-simples-com-html-e-css-/style.css .
 sudo cp site-simples-com-html-e-css-/Como-Criar-um-SITE-Com-HTML-e-CSS-na-prática.png .
 ```
+
