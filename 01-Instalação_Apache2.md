@@ -75,4 +75,9 @@ sudo cp site-simples-com-html-e-css-/index.html .
 sudo cp site-simples-com-html-e-css-/style.css .
 sudo cp site-simples-com-html-e-css-/Como-Criar-um-SITE-Com-HTML-e-CSS-na-prática.png .
 ```
+Ao mover os arquivos, poderemos no mesmo endereço ```hppt://localhost``` ou ```10.0.2.15``` encotraremos a página que coletamos no GitHub funcionando no nosso servidor HTTP como no registro abaixo:
+<img width="1207" height="771" alt="image" src="https://github.com/user-attachments/assets/99cb57f4-cbf7-4760-aa30-09f1d6fdf9ce" />
 
+# Conclusão:
+
+Com esta prática, podemos ver como atualizar os pacotes de instalação do Linux Ubuntu, instalar e verificar o funcionamento do Apache2, bem como, a publicação de uma página estática em um servidor local http. Como os arquivos que publicamos foi coletado no GitHub, ganhamos como um brinde, a instalação do GitHub e a clonagem de um repositório público.
