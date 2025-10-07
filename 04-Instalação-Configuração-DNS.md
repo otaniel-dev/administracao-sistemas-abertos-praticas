@@ -50,7 +50,7 @@ Para configurar nossa Zona Direta iremos utilizar:
 zone "meudominio.com" {
       type master;
       file "/etc/bind/db.meudominio.com";
-}
+};
 ```
 Ao adicionar este trecho ao fim do arquivo, habilitamos o nosso domínio para ser utilizado e convertido em IP.
 
@@ -60,11 +60,12 @@ Agora é necessário configurar a Zona Reversa, que é a responsável por conver
 zone "192.168.0.-in.addr.arpa" {
       type master;
       file "/etc/bind/db.reverse99";
-}
+};
 ```
 Após a adição das Zonas, veja como o estado atual do arquivo:
  
-<img width="1211" height="470" alt="image" src="https://github.com/user-attachments/assets/c91eaffc-f0e3-4103-b56d-fe855f1cc3a4" />
+<img width="1199" height="482" alt="image" src="https://github.com/user-attachments/assets/025304d4-08f4-4ae9-b647-ec63c1398c5f" />
+
 
 Agora que configuramos nossas Zonas, é necessário criar os bancos de dados para as Zonas Direta e Reversa acessarem. Por padrão os arquivod db.local e db.127 são respectivamente responsáveis por armazenarem essas informações, por isto, iremos com base neles, criar nossos arquivos de banco de dados usando:
 ```
@@ -92,6 +93,7 @@ Substituiremos também os ```localhost``` por ```meudominio.com``` novamente, em
 Ficando assim ao fim da configuração:
 
 <img width="1208" height="314" alt="image" src="https://github.com/user-attachments/assets/a5301c09-cee5-4370-8f51-28113e39cc6b" />
+
 
 Agora, irenmos adicionar nosso server no ```resolv.conf```:
 
