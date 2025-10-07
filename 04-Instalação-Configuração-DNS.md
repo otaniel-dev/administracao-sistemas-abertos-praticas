@@ -13,7 +13,7 @@ sudo apt install bind9
 Após intalar podemos verifica a execução do serviço usando:
 
 ```
-sudo /etc/init.d/named statua
+sudo /etc/init.d/named status
 ```
 
 Veja que o nosso servidor DNS está instalado e ativo:
