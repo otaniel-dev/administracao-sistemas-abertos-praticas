@@ -54,12 +54,34 @@ Para que consigamos realizar a comunicação entre os servidores será necessár
 
 <img width="588" height="485" alt="image" src="https://github.com/user-attachments/assets/d66afeaf-d515-4f00-bf75-84a64d49a439" />
 
+Observe que o endereço do DNS é o endereço do Servidor Inicial com final 99.
+
 Após configurar o IP, será necesário desligar a máquina para que seja possível a alteração do tipo de placa de rede de NAT para Rede Interna:
 
 <img width="780" height="488" alt="image" src="https://github.com/user-attachments/assets/ca11e4f1-63d5-4b02-8b0a-32e9b5963da4" />
 
 
-# Configuração do 
+# Configuração do DNS
 
+Para que nosso segundo servidor consiga resolver nomes usando o nosso primeiro servidor, será necessário configura o bind para nosso outro domínio, no caso ```matriz.com```, para isso será necessário criar o arquivo de dados para a matriz usando meudominio como base. Para isso iremos ingressar no diretório ```cd /etc/bind``` e executar o seguinte comando:
+```
+sudo cp db.meudominio.com db.matriz.com
+```
 
+Em seguida, será necessário editar o arquivo alterando os parametros de ```meudominio.com``` para ```matriz.com``` inserindo o IP da segunda máquina o ```192.168.0.100```, veja como o arquivo ficará no registro a seguir:
+
+<img width="1205" height="456" alt="image" src="https://github.com/user-attachments/assets/4eb4a80b-932c-4fd2-a813-ff7e19c145d6" />
+
+Agora, iremos configurar a Zona Direta [Será necessário somente a zona direta, não precisa da reversa] para a ```matriz.com```, para isto, iremos ingressar no arquivos de zonas o ```named.conf.local``` e adicionar as zonas necessárias como na imagem a seguir:
+
+<img width="1004" height="626" alt="image" src="https://github.com/user-attachments/assets/1d7b71fc-47fe-4761-8aef-f883c3d847da" />
+
+Para a Zona reversa, iremos acessar o arquivo ```db.reverse99``` usando ```sudo nano db.reverse99``` para adicionar o IP nosso outro dominio o ```matriz.com```, veja como ficará o arquivo com a adição do IP 100 à lista de Zonas Reversas:
+
+<img width="647" height="325" alt="image" src="https://github.com/user-attachments/assets/4207f96e-a31d-4697-890e-b04e6edb5436" />
+
+Após concluir as configurações de Zona, será necessário reiniciar o Bind usando:
+```
+sudo /etc/init.d/named restart
+```
 
