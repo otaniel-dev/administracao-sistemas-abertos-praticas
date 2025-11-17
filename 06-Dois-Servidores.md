@@ -1,6 +1,8 @@
 # Introdução
 A prática a seguir, visa a configuração de dois serviços DNS. Para isto, será necessário subir mais uma máquina virtual e intalar o Apache2 como na prática 1.
+Segue o esquema a ser criado:
 
+<img width="832" height="366" alt="image" src="https://github.com/user-attachments/assets/68fbc321-e7a1-4e95-9d3d-ee491a75fb4c" />
 
 # Definindo diretórios
 
@@ -33,7 +35,8 @@ sudo cp 000-default.conf matriz.conf
 ```
 Iremos editar o arquivo de configuração da seguinte maneira:
 
-<img width="1203" height="764" alt="image" src="https://github.com/user-attachments/assets/f3d321b0-64d5-4697-8962-a35a32f3f810" />
+<img width="1202" height="723" alt="image" src="https://github.com/user-attachments/assets/7303ab6f-bb80-4c31-88f7-b87dbd2a8c81" />
+
 
 Após editar o arquivo de configurações, iremos habilitar a configuração criada usando:
 ```
@@ -85,3 +88,10 @@ Após concluir as configurações de Zona, será necessário reiniciar o Bind us
 sudo /etc/init.d/named restart
 ```
 
+Após a reinicialização, veja que no Servidor 1, é possível acessar o site do Servidor 2:
+
+<img width="1284" height="874" alt="image" src="https://github.com/user-attachments/assets/f85810fe-2d89-4cee-8b99-1bd3593e429b" />
+
+Assim como no Servidor 2 é possível acessar o site do Servidor 1:
+
+<img width="1282" height="867" alt="image" src="https://github.com/user-attachments/assets/872cfe27-18f5-4898-917a-0f3116b1e830" />
