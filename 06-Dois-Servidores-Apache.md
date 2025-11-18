@@ -1,12 +1,12 @@
 # Introdução
-A prática a seguir, visa a configuração de dois serviços DNS. Para isto, será necessário subir mais uma máquina virtual e intalar o Apache2 como na prática 1.
+A prática a seguir, visa a configuração de dois serviços DNS que se conversem entre si. Para isto, será necessário subir mais uma máquina virtual e instalar o Apache2 como na prática 1 nesta nova máquina além de realizar configurações na rede dos dois servidores para que eles se comuniquem.
+
 Segue o esquema a ser criado:
 
 <img width="832" height="366" alt="image" src="https://github.com/user-attachments/assets/68fbc321-e7a1-4e95-9d3d-ee491a75fb4c" />
 
 # Definindo diretórios
-
-Neste ponto iremos criar os diretórios no apache, onde nosso servidor será nomeado de Matriz. Para isto é necessário ingressar no diretório padrão dos arquivos para nosso servidor HTTP ```cd /var/www```, onde criaremos nosso diretório usando:
+Com a segunda máquina criada e o Sistema Operacional criado iremos criar os diretórios no apache, onde nosso servidor será nomeado de Matriz. Para isto é necessário ingressar no diretório padrão dos arquivos para nosso servidor HTTP ```cd /var/www```, onde criaremos nosso diretório usando:
 ```
 sudo mkdir -p matriz/public_html
 ```
