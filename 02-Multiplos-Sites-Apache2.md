@@ -1,4 +1,7 @@
-# Criação das pastas para gerenciamentos dos sites
+# Objetivo
+Esta prática tem com objetivo fazer com que nosso servidor HTTP disponibilize dois sites ao mesmo tempo, pode meio de domínios diferentes. Ou seja, ao acessar por exemplo ```http://site1``` iremos ter acesso à um site e ao acessar ```http://site2``` iremos acessar outro site, usando apenas um servidor HTTP.
+
+# Criação de diretórios para gerenciamento dos sites
 
 Para publicar os sites, precisamos inicialmente criar os diretórios que comportarão as nossas páginas, para isto, deveremos ingressar no diretório ```/var/www```:
 ```
@@ -11,7 +14,7 @@ sudo mkdir -p site1/public_html
 ```
 sudo mkdir -p site2/public_html
 ```
-O parametro ```-p``` no comando ```mkdir``` tem o intuito de criar além do diretório site1 ou site2, criar também a pasta ```public_html```.
+O parametro ```-p``` no comando ```mkdir``` tem o intuito de criar além do diretório site1 ou site2, criar também a pasta ```public_html``` dentro delas.
 
 Como podemos ver no print a seguir, criamos os diretórios site1 e site2, e dentro do diretório site, o public_html já está criado:
 <img width="567" height="223" alt="image" src="https://github.com/user-attachments/assets/525397f9-4188-4039-a683-a48082f1d6e8" />
