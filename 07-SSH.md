@@ -60,3 +60,57 @@ Será solicitada a confirmação de que você quer realmente se conectar ao Serv
 
 # Configurando Chave de Acesso:
 
+Para exibir o arquivo de configuração use:
+```
+ls -ls
+```
+
+
+Ingressar no arquivo de configuração do SSH:
+```
+cd .ssh/
+```
+
+Para criar chave privada:
+```
+ssh-keygen
+```
+
+Envie a chave usando:
+```
+ssh-copy-id usuario@ip_de_quem_vc_quer_copiar
+```
+
+Para configurar para acesso somente com chave será necessário editar o arquivo ```sshd.config```, localizado na pasta
+```
+cd /etc/ssh
+```
+
+No arquivo de configuração iremos adicionar a linha:
+```
+PermitRootLogin no
+```
+Além disso iremos descomentar as linhas:
+```
+MaxAuthTries 4
+MaxSessions 10
+```
+
+Deixando assim:
+
+<img width="533" height="328" alt="image" src="https://github.com/user-attachments/assets/7ecf83ff-0d32-48ee-825c-5be72d780e3c" />
+
+E iremos descomentar as linhas:
+```
+PubkeyAuthentication yes
+AuthorizedKeysFile *******
+PasswordAuthentication no
+PermitEmptyPasswords no
+```
+
+
+
+
+
+
+
