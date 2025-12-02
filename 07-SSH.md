@@ -75,11 +75,14 @@ Para criar chave privada:
 ```
 ssh-keygen
 ```
+Crie uma pasta chamada ```authorized_keys``` no diretório ```.ssh/```
 
 Envie a chave usando:
 ```
 ssh-copy-id usuario@ip_de_quem_vc_quer_copiar
 ```
+
+
 
 Para configurar para acesso somente com chave será necessário editar o arquivo ```sshd.config```, localizado na pasta
 ```
